@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Members</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        /* Container for the faculty cards */
+        .faculty-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+            max-width: 1200px;
+        }
+
+        /* Individual Faculty Card */
+        .faculty-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .faculty-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Image styling */
+        .faculty-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Content inside the card */
+        .faculty-card .content {
+            padding: 20px;
+        }
+
+        .faculty-card .content h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .faculty-card .content p {
+            font-size: 1em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .faculty-card .content a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .faculty-card .content a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="faculty-container">
+        <!-- Faculty Member 1 -->
+        <div class="faculty-card">
+            <img src="https://www.ncerpune.in/computer/images/faculty/sanjeevkumar.jpg" alt="Faculty Member 1">
+            <div class="content">
+                <h3>Dr.Sanjeevkumar angdi</h3>
+                <p>Head of the department of computer science and engineering</p>
+                <p>
+                    Qualification: Ph.D , M.Tech
+                    Experience: Total UG Experience = 10Yrs
+                    Area of Interest: Computer Vision, Machine Learning, Image Processing
+                    Email Id.: angadi.sanjeevkumar@gmail.com
+                    Contact No: 9503746717</p>
+                <a href="#">View Profile</a>
+            </div>
+        </div>
+
+        <!-- Faculty Member 2 -->
+        <div class="faculty-card">
+            <img src="https://www.ncerpune.in/computer/images/faculty/Dr-Aparna-Pande-01.jpg" alt="Faculty Member 2">
+            <div class="content">
+                <h3>Dr.Aparna Pandey</h3>
+                <p>Designation:Pricipal </p>
+                <p>
+                   
+                    Qualification: PhD, ME CSE, BE CSE
+                    Experience: Total UG Experience = 20Yrs
+                    Area of Interest: Neural Networks, Computer network, multi-casting Group Communication
+                    Email Id.: principal@ncerpune.in
+                    Contact No: 9850907880
+                    
+                </p>
+                <a href="#">View Profile</a>
+            </div>
+        </div>
+
+        <!-- Faculty Member 3 -->
+        <div class="faculty-card">
+            <img src="https://www.ncerpune.in/computer/images/faculty/uma-patil.jpg" alt="Faculty Member 3">
+            <div class="content">
+                <h3>Prof.Uma patil</h3>
+                <p>Designation: Assistant Professor (T&P Co-Ordinator)
+                </p>
+                <p>Qualification: PhD*CSE, MTech(CSE)
+                    Experience: Total Experience: 18.09Yrs UG: 8.11Yrs IND: 09.10Yrs
+                    Area of Interest: Data Security, Cloud Computing
+                    Email Id.: uma@ncerpune.in
+                    Contact No: 8792867705
+                    
+                    </p>
+                <a href="#">View Profile</a>
+            </div>
+        </div>
+
+        <!-- Faculty Member 4 -->
+        <div class="faculty-card">
+            <img src="https://www.ncerpune.in/computer/images/faculty/dr-prasad-dhore.jpg" alt="Faculty Member 4">
+            <div class="content">
+                <h3>Name: Dr. Prasad B. Dhore</h3>
+                <p>Designation: Assistant Professor</p>
+                <p>Qualification: PhD, M. E.(Computer Network),BE (Computer Engineering)
+                    Experience: Total UG Experience = 05Yrs
+                    Area of Interest: Software Testing, DBMS & Networking
+                    Email Id.: dhoreprasad89@gmail.com
+                    Contact No: 9552149862
+                    
+                    </p>
+                <a href="#">View Profile</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

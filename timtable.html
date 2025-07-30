@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SE CSE (Div B) Timetable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .filters {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+    select, button {
+      padding: 8px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #2e86de;
+      color: white;
+    }
+    td {
+      font-size: 14px;
+    }
+    .lab {
+      background-color: #d1f2eb;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>SE CSE (Div B) - Timetable</h1>
+
+  <div class="filters">
+    <select id="dayFilter">
+      <option value="all">All Days</option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+    </select>
+
+    <select id="batchFilter">
+      <option value="all">All Batches</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="B3">B3</option>
+    </select>
+
+    <button onclick="resetFilters()">Reset Filters</button>
+  </div>
+
+  <table id="timetable">
+    <thead>
+      <tr>
+        <th>Day/Time</th>
+        <th>08:30 - 09:30</th>
+        <th>09:30 - 10:30</th>
+        <th>10:30 - 11:40</th>
+        <th>11:40 - 12:40</th>
+        <th>01:30 - 02:30</th>
+        <th>02:30 - 03:30</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-day="Monday">
+        <td>Monday</td>
+        <td class="lab" data-batch="B1 B2 B3">OS Lab (B1), Python Lab (B2), SEM-II Lab (B3)</td>
+        <td colspan="2">OS (SHS)</td>
+        <td>DLDM (LM)</td>
+        <td>UHV</td>
+        <td>BHR</td>
+      </tr>
+      <tr data-day="Tuesday">
+        <td>Tuesday</td>
+        <td>P&S (KJK)</td>
+        <td>DAA (SBG)</td>
+        <td>P&S (KJK)</td>
+        <td>OS (SHS)</td>
+        <td class="lab" data-batch="B1 B2 B3">Labs by Batches</td>
+        <td class="lab" data-batch="B1 B2 B3"></td>
+      </tr>
+      <tr data-day="Wednesday">
+        <td>Wednesday</td>
+        <td>P&S (KJK)</td>
+        <td>OS (SHS)</td>
+        <td class="lab" colspan="2" data-batch="B3">Seminar-II Lab (B3)</td>
+        <td>UHV</td>
+        <td>BHR</td>
+      </tr>
+      <tr data-day="Thursday">
+        <td>Thursday</td>
+        <td>DLDM (LM)</td>
+        <td>DAA (SBG)</td>
+        <td class="lab" data-batch="B1">DAA Tutorial (B1)</td>
+        <td class="lab" data-batch="B2 B3">DLDM Tutorial (B2), SEM-II Lab (B3)</td>
+        <td colspan="2"></td>
+      </tr>
+      <tr data-day="Friday">
+        <td>Friday</td>
+        <td>DAA (SBG)</td>
+        <td>P&S (KJK)</td>
+        <td colspan="2"></td>
+        <td>UHV</td>
+        <td>BHR</td>
+      </tr>
+      <tr data-day="Saturday">
+        <td>Saturday</td>
+        <td colspan="2" class="lab">DLDM (LM)</td>
+        <td>Python (SBM)</td>
+        <td colspan="3"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    const dayFilter = document.getElementById('dayFilter');
+    const batchFilter = document.getElementById('batchFilter');
+    const rows = document.querySelectorAll('#timetable tbody tr');
+
+    dayFilter.addEventListener('change', applyFilters);
+    batchFilter.addEventListener('change', applyFilters);
+
+    function applyFilters() {
+      const selectedDay = dayFilter.value;
+      const selectedBatch = batchFilter.value;
+
+      rows.forEach(row => {
+        const day = row.getAttribute('data-day');
+        let showRow = true;
+
+        // Filter by day
+        if (selectedDay !== 'all' && day !== selectedDay) {
+          showRow = false;
+        }
+
+        // Filter by batch
+        if (selectedBatch !== 'all') {
+          const labCells = row.querySelectorAll('[data-batch]');
+          let matchesBatch = false;
+
+          labCells.forEach(cell => {
+            const batches = cell.getAttribute('data-batch');
+            if (batches && batches.includes(selectedBatch)) {
+              matchesBatch = true;
+            }
+          });
+
+          if (labCells.length > 0 && !matchesBatch) {
+            showRow = false;
+          }
+        }
+
+        row.style.display = showRow ? '' : 'none';
+      });
+    }
+
+    function resetFilters() {
+      dayFilter.value = 'all';
+      batchFilter.value = 'all';
+      applyFilters();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nutan College of Engineering & Research</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #003366, #007acc);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Logo */
+        .logo-img {
+            width: 80px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: moveText 10s linear infinite;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+            width: 80%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            font-size: 28px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* College Image */
+        .about-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        /* Mission and Vision */
+        .mission-vision {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .mission, .vision {
+            width: 48%;
+            background: #eef5ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mission:hover, .vision:hover {
+            transform: scale(1.05);
+        }
+
+        .mission h3, .vision h3 {
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column;
+            }
+            .mission, .vision {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html">
+                <img src="https://www.ncerpune.in/images/ncer-logo.png" alt="Nutan College Logo" class="logo-img">
+            </a>
+            <h1 class="logo-text">Nutan College of Engineering & Research</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>About Nutan College of Engineering & Research</h2>
+            <p>
+                Nutan College of Engineering & Research is a prestigious institution dedicated to excellence in technical education. 
+                Our college offers world-class infrastructure, experienced faculty, and a student-centered learning environment. 
+                We focus on innovation, research, and industry-oriented education to shape future engineers.
+            </p>
+
+            <img src="https://static.zollege.in/public/reviewPhotos/285929/inbound4354988421706326009.jpg" alt="College Building" class="about-img">
+
+            <div class="mission-vision">
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p>
+                        To provide high-quality technical education, encourage research & innovation, and develop socially responsible engineers.
+                    </p>
+                </div>
+                <div class="vision">
+                    <h3>Our Vision</h3>
+                    <p>
+                        To be a globally recognized engineering institute that fosters excellence in technology, leadership, and entrepreneurship.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nutan College of Engineering & Research. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

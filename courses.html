@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Nutan College of Engineering & Research</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #003366, #007acc);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Logo */
+        .logo-img {
+            width: 80px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Courses Section */
+        .courses-section {
+            text-align: center;
+            width: 80%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .courses-section h2 {
+            font-size: 28px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .courses-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Course Cards */
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .course-card {
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .course-card h3 {
+            font-size: 20px;
+            color: #007acc;
+            padding: 15px 10px;
+        }
+
+        .course-card p {
+            font-size: 16px;
+            padding: 0 10px 15px;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html">
+                <img src="https://www.ncerpune.in/images/ncer-logo.png" alt="Nutan College Logo" class="logo-img">
+            </a>
+            <h1 class="logo-text">Nutan College of Engineering & Research</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="courses-section">
+            <h2>Our Courses</h2>
+            <p>Explore a variety of courses offered at Nutan College of Engineering & Research.</p>
+
+            <div class="course-container">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <img src="https://th.bing.com/th/id/OIP.wnopWdVtS-8WaeWRJAI8UAHaDR?rs=1&pid=ImgDetMain" alt="Mechanical Engineering">
+                    <h3>Mechanical Engineering</h3>
+                    <p>Duration: 4 Years | AICTE Approved</p>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <img src="https://1.bp.blogspot.com/-WkLaijQn9Io/Xe-b02-c9zI/AAAAAAAAEPI/qKqXwEZ-KEUq1NjfuzrTQlhXKLqvSVzxQCLcBGAsYHQ/w1200-h630-p-k-no-nu/computer%2Bscience.jpg" alt="Computer Engineering">
+                    <h3>Computer Engineering</h3>
+                    <p>Duration: 4 Years | AICTE Approved</p>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <img src="https://th.bing.com/th/id/OIP.5Rvzl1wB3SNUt9RMmaaNKgHaE8?rs=1&pid=ImgDetMain" alt="Electrical Engineering">
+                    <h3>Electrical Engineering</h3>
+                    <p>Duration: 4 Years | AICTE Approved</p>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <img src="https://th.bing.com/th/id/OIP.H0li3_1SgfmjyjpvrCxfbAHaFj?rs=1&pid=ImgDetMain" alt="Civil Engineering">
+                    <h3>Civil Engineering</h3>
+                    <p>Duration: 4 Years | AICTE Approved</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nutan College of Engineering & Research. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
